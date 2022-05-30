@@ -21,7 +21,13 @@ function App() {
       App
     </h1>
     <Button>
-      Test
+      Primary Button
+    </Button>
+    <Button secondary>
+      Secondary Button
+    </Button>
+    <Button disabled>
+      Disabled Button
     </Button>
     </>
   );
