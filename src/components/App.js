@@ -29,6 +29,9 @@ function App() {
     <Button disabled>
       Disabled Button
     </Button>
+    <Button large>
+      Large Button
+    </Button>
     </>
   );
 }
