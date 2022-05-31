@@ -1,6 +1,5 @@
 import React from "react";
 import {BrowserRouter, Route, Switch } from "react-router-dom";
-import {Button} from 'components/common';
 import {createGlobalStyle} from 'styled-components';
 import Login from "components/pages/Login";
 import Home from "components/pages/Home";
@@ -20,9 +19,6 @@ function App() {
   return (
     <>
     <GlobalStyle />
-    <h1>
-      App
-    </h1>
     <BrowserRouter>
       <Switch>
         <Route path='/login' component={Login} />
