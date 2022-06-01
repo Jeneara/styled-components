@@ -10,19 +10,33 @@ const HeaderWrapper = styled.header`
     padding: 0 16px;
     position: fixed;
     top: 0;
-    background: #eee;
+    background-image: linear-gradient(to right, #f8049c, #fdd54f);
+    border-bottom: #fdd54f 3px solid;
 `;
 
 const Menu = styled.nav`
-    display: flex;
-    position: relative;
-    width: initial;
-    border-bottom: none;
-    margin: auto 0 auto auto;
-    font-family: 'Open Sans';
-    background: none;
-    left: initial;
-    top: initial;
+    display: block;
+    position: absolute;
+    font-family: 'Open Sans'; 
+    width: 100%;
+    top: 60px;
+    left: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    border-bottom: #fdd54f 3px solid;
+    background: #fff;
+
+
+    @media(min-width: 768px){
+        display: flex;
+        position: relative;
+        width: initial;
+        border-bottom: none;
+        margin: auto 0 auto auto;
+        background: none;
+        left: initial;
+        top: initial;
+    }
 `;
 
 const MenuAlt = styled(Menu)`
@@ -44,6 +58,7 @@ const StyledLink = styled(Link)`
     box-sizing: border-box;
     margin: auto 0;
     font-weight: ${props => props.isActive ? 'bold' : 'normal'};
+    color: #000;
 `;
 
 export function Header(){
