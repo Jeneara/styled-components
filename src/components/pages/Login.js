@@ -12,7 +12,7 @@ const Form = styled.form`
     box-sizing: border-box;
     color: #000;
     border-radius: 4px;
-    `;
+`;
 
 export default function Login(){
     const [formFields, setFormFields] = useState({username: '', password: ''});
