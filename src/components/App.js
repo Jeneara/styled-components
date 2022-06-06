@@ -1,27 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter, Route, Switch } from "react-router-dom";
 import {createGlobalStyle, ThemeProvider} from 'styled-components';
 import Login from "components/pages/Login";
 import Home from "components/pages/Home";
+import LightTheme from './themes/light';
+import DarkTheme from './themes/dark';
 
 const GlobalStyle = createGlobalStyle`
   body{
-    background: #fff;
+    background: ${props => props.theme.bodyBackgroundColor};
     min-height: 100vh;
     margin: 0;
-    color: #000;
+    color: ${props => props.theme.bodyFontColor};
     font-family: 'Kaushan Script';
   }
 `;
 
-const theme = {
-  primaryColor: '#f8049c',
-  secondaryColor: '#fdd54f'
-};
+
 
 function App() {
+  const [theme, setTheme] = useState(LightTheme);
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{...theme, setTheme: () => {
+      setTheme(s => s.id === 'light' ? DarkTheme : LightTheme);
+    }}}>
     <GlobalStyle />
     <BrowserRouter>
       <Switch>
