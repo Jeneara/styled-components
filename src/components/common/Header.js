@@ -25,7 +25,7 @@ const Menu = styled.nav`
     padding: 8px;
     box-sizing: border-box;
     border-bottom: 3px solid ${props => props.theme.secondaryColor};
-    background: #fff;
+    background: ${props => props.theme.bodyBackgroundColor};
 
 
     @media(min-width: 768px){
@@ -56,7 +56,7 @@ const StyledLink = styled(Link)`
     box-sizing: border-box;
     margin: auto 0;
     font-weight: ${props => props.isActive ? 'bold' : 'normal'};
-    color: #000;
+    color: ${props => props.theme.bodyFontColor};
 `;
 
 const MobileMenuIcon = styled.div`
@@ -67,7 +67,7 @@ const MobileMenuIcon = styled.div`
 
     >div{
         height: 3px;
-        background: #000;
+        background: ${props => props.theme.bodyFontColor};
         margin: 5px 0;
         width: 100%;
     }

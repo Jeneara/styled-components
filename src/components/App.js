@@ -8,10 +8,10 @@ import DarkTheme from './themes/dark';
 
 const GlobalStyle = createGlobalStyle`
   body{
-    background: #fff;
+    background: ${props => props.theme.bodyBackgroundColor};
     min-height: 100vh;
     margin: 0;
-    color: #000;
+    color: ${props => props.theme.bodyFontColor};
     font-family: 'Kaushan Script';
   }
 `;
