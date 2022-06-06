@@ -10,7 +10,7 @@ const Button = styled.button `
     border-radius: 5px;
     font-size: 1.5em;
     ` : css`
-    padding: 8px
+    padding: 8px;
     border-radius: 4px;
     font-size: 1em;
     `}
